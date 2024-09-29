@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Exiled.API.Features;
-using PlayerH = Exiled.API.Features.Player;
-using server = Exiled.API.Features.Server;
+using PlayerH = Exiled.Events.Handlers.Player;
+using ServerH = Exiled.Events.Handlers.Server;
 
 namespace myfirstplugin
 {
@@ -27,7 +27,7 @@ namespace myfirstplugin
             PlayerH.Verified += EventHandler.OnVerified;
             PlayerH.Hurting += EventHandler.OnHurting;
             PlayerH.Dying += EventHandler.Ondeath;
-            Server.RoundEnded += EventHandler.OnRoundEnd;
+            ServerH.RoundEnded += EventHandler.OnRoundEnd;
 
             base.OnEnabled();
         }
@@ -38,7 +38,7 @@ namespace myfirstplugin
             PlayerH.Verified -= EventHandler.OnVerified;
             PlayerH.Hurting -= EventHandler.OnHurting;
             PlayerH.Dying -= EventHandler.Ondeath;
-            Server.RoundEnded -= EventHandler.OnRoundEnd;
+            ServerH.RoundEnded -= EventHandler.OnRoundEnd;
 
             stuff = null;
             EventHandler = null;
