@@ -10,7 +10,7 @@ namespace sniper
         public override string Name => "FlashbangGun";
         public override string Author => "thecroshel";
         public override string Prefix => "flashgun";
-        public override Version Version => new Version(1, 0, 0);
+        public override Version Version => new Version(1, 2, 0);
         public override Version RequiredExiledVersion => new Version(8, 9, 11);
 
         private EventHandlers _eventHandlers;
