@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Exiled.API.Features;
 using PlayerH = Exiled.Events.Handlers.Player;
 using ServerH = Exiled.Events.Handlers.Server;
+using Exiled.CustomItems.API.Features;
+using InventorySystem.Items.Firearms.Attachments;
 
 namespace myfirstplugin
 {
@@ -17,6 +19,7 @@ namespace myfirstplugin
         public override Version RequiredExiledVersion { get; } = new Version(8, 0, 0);
 
         public static myfirstplugin stuff;
+        public static myfirstplugin customitems;
         public Dictionary<Player, int> Killcount = new Dictionary<Player, int>();
 
         public override void OnEnabled()
