@@ -44,7 +44,6 @@
     <Compile Include="Commands\TPS.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="EventHandler.cs" />
-    <Compile Include="Itemss\flashbanggun.cs" />
     <Compile Include="myfirstplugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +54,9 @@
     <PackageReference Include="EXILED-OFFICIAL">
       <Version>8.12.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Itemss\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
