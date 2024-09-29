@@ -54,5 +54,14 @@ namespace myfirstplugin
         {
             myfirstplugin.stuff.Killcount.Clear();
         }
+
+
+        public void OnUsingRadioBattery(UsingRadioBatteryEventArgs ev)
+        {
+            if (ev.Drain > 0)
+            {
+                ev.IsAllowed = false;
+            }
+        }
     }
 }

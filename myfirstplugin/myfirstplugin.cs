@@ -28,6 +28,7 @@ namespace myfirstplugin
             PlayerH.Hurting += EventHandler.OnHurting;
             PlayerH.Dying += EventHandler.Ondeath;
             ServerH.RoundEnded += EventHandler.OnRoundEnd;
+            PlayerH.UsingRadioBattery += EventHandler.OnUsingRadioBattery;
 
             base.OnEnabled();
         }
@@ -39,6 +40,7 @@ namespace myfirstplugin
             PlayerH.Hurting -= EventHandler.OnHurting;
             PlayerH.Dying -= EventHandler.Ondeath;
             ServerH.RoundEnded -= EventHandler.OnRoundEnd;
+            PlayerH.UsingRadioBattery -= EventHandler.OnUsingRadioBattery;
 
             stuff = null;
             EventHandler = null;
